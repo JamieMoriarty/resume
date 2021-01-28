@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from 'styles/Home.module.css'
 
-import FrontPageAction from '../src/components/frontpage/actions/Action'
+import FrontPageAction from '@/components/frontpage/actions/Action'
 
 export default function Home() {
   return (
