@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './styles.module.scss'
 
-const FrontPageAction = ({ title, description, href }) => {
+const FrontPageCard = ({ title, description, href }) => {
     return(
         <a href={href} className={styles.card}>
             <h3>{title} &rarr;</h3>
@@ -11,4 +11,4 @@ const FrontPageAction = ({ title, description, href }) => {
     );
 }
 
-export default FrontPageAction
+export default FrontPageCard
