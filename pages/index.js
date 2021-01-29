@@ -27,24 +27,8 @@ export default function Home() {
 
         <div className={styles.grid}>
           <FrontPageCard 
-            title="Documentation"
-            description="Find in-depth information about Next.js features and API."
-            href="https://nextjs.org/docs"
-          />
-          <FrontPageCard 
-            title="Learn"
-            description="Learn about Next.js in an interactive course with quizzes!"
-            href="https://nextjs.org/learn"
-          />
-          <FrontPageCard 
-            title="Examples"
-            description="Discover and deploy boilerplate example Next.js projects."
-            href="https://github.com/vercel/next.js/tree/master/examples"
-          />
-          <FrontPageCard 
-            title="Deploy"
-            description="Instantly deploy your Next.js site to a public URL with Vercel."
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            title="Resumé"
+            description="A brief description of everything relevant to future employers :)"
           />
         </div>
       </main>

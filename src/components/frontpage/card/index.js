@@ -2,12 +2,15 @@ import React from 'react';
 
 import styles from './styles.module.scss'
 
-const FrontPageCard = ({ title, description, href }) => {
+const FrontPageCard = ({ title, description, children }) => {
+    const [active, setActive] = React.useState(false)
+
     return(
-        <a href={href} className={styles.card}>
-            <h3>{title} &rarr;</h3>
+        <button className={styles.card} onClick={() => setActive(!active)}>
+            <h3>{title}<span className={styles.card__expand}>expand</span></h3>
             <p>{description}</p>
-        </a>
+            <div className={`${styles.card__content} ${!active? styles['card__content--hidden'] : ''}`}></div>
+        </button>
     );
 }
 
