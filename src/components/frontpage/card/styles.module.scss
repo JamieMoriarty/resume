@@ -1,4 +1,5 @@
 .card {
+    width: 100%;
     padding: 1.5rem 2rem;
     text-align: left;
     color: inherit;
@@ -26,7 +27,7 @@
         font-size: 1.5rem;
     }
 
-    p {
+    &__summary {
         margin: 0;
         font-size: 1.25rem;
         line-height: 1.5;

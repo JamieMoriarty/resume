@@ -29,7 +29,14 @@ export default function Home() {
           <FrontPageCard 
             title="Resumé"
             description="A brief description of everything relevant to future employers :)"
-          />
+          >
+            <ul>
+              <li>
+                <p>Nuuday (2017 - ):</p>
+                <p>First Back-end developer, with Java and Kotlin in Spring and SpringBoot frameworks. Later front-end with React mainly in javascript, but occasionally typescript as well</p>
+              </li>
+            </ul>
+          </FrontPageCard>
         </div>
       </main>
     </div>
