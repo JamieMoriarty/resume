@@ -1,19 +1,45 @@
 import React from 'react';
 
-import styles from './styles.module.scss'
+import styles from './Card.module.scss';
 
 const FrontPageCard = ({ title, description, children }) => {
-    const [active, setActive] = React.useState(false)
+    const [active, setActive] = React.useState(false);
 
-    return(
-        <button className={styles.card} onClick={() => setActive(!active)}>
-            <h3>{title}<span className={styles.card__expand}>expand</span></h3>
-            <p className={styles.card__summary}>{description}</p>
-            <div className={`${styles.card__content} ${!active ? styles['card__content--hidden'] : ''}`}>
-                {children}
-            </div>
-        </button>
+    return (
+        <article
+            className={`${styles['card']} ${
+                !active ? styles['card--interactive'] : ''
+            }`}
+        >
+            <button
+                className={
+                    styles['card__header'] +
+                    ' ' +
+                    styles['card__no-style-button']
+                }
+                onClick={() => setActive(!active)}
+            >
+                <header>
+                    <h1 className={styles['card__title']}>{title}</h1>
+                    <span className={styles.card__toggle}>
+                        {active ? 'collapse' : 'expand'}
+                    </span>
+                </header>
+                {!active && (
+                    <p className={styles.card__summary}>{description}</p>
+                )}
+            </button>
+            {active && (
+                <div
+                    className={`${styles.card__content} ${
+                        !active ? styles['card__content--hidden'] : ''
+                    }`}
+                >
+                    {children}
+                </div>
+            )}
+        </article>
     );
-}
+};
 
-export default FrontPageCard
+export default FrontPageCard;
