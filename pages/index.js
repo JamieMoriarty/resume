@@ -1,7 +1,8 @@
-import Head from 'next/head'
-import styles from 'styles/Home.module.scss'
+import Head from "next/head";
+import styles from "styles/Home.module.scss";
 
-import FrontPageCard from '@/components/frontpage/card'
+import FrontPageCard from "@/components/frontpage/Card";
+import Resume from "@/components/resume";
 
 export default function Home() {
   return (
@@ -12,33 +13,25 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome!
-        </h1>
+        <h1 className={styles.title}>Welcome!</h1>
 
         <div className={styles.description}>
           <p>
-            This will initially be all playground for me and hopefully transition to a display case for my talents along the way :)
+            This will initially be all playground for me and hopefully
+            transition to a display case for my talents along the way :)
           </p>
-          <p>
-            For now, it includes a resumé, and not much else.
-          </p>
+          <p>For now, it includes a resumé, and not much else.</p>
         </div>
 
         <div className={styles.grid}>
-          <FrontPageCard 
+          <FrontPageCard
             title="Resumé"
             description="A brief description of everything relevant to future employers :)"
           >
-            <ul>
-              <li>
-                <p>Nuuday (2017 - ):</p>
-                <p>First Back-end developer, with Java and Kotlin in Spring and SpringBoot frameworks. Later front-end with React mainly in javascript, but occasionally typescript as well</p>
-              </li>
-            </ul>
+            <Resume />
           </FrontPageCard>
         </div>
       </main>
     </div>
-  )
+  );
 }

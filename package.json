@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "debug": "NODE_OPTIONS='--inspect' next dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -12,5 +13,8 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "sass": "^1.32.5"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.7"
   }
 }
