@@ -25,12 +25,14 @@ const SinglePositionPost = ({ organisationName, title, start, end, description, 
                     {format(start, 'do MMMM y')} - {end ? format(end, 'do MMMM y') : ''}
                 </p>
             </header>
-            <p>{description}</p>
-            <ul>
-                {keyWords.map(word => (
-                    <li key={`${organisationName}_keyword_${word}`}>{word}</li>
-                ))}
-            </ul>
+            <div className={styles['single-position']}>
+                <p>{description}</p>
+                {/*<ul>
+                    {keyWords.map(word => (
+                        <li key={`${organisationName}_keyword_${word}`}>{word}</li>
+                    ))}
+                </ul>*/}
+            </div>
         </section>
     );
 };
@@ -48,18 +50,20 @@ const MultiplePositionsPost = ({ id, name, positions }) => {
                     {format(start, 'do MMMM y')} - {end ? format(end, 'do MMMM y') : ''}
                 </p>
             </header>
-            <ul>
-                {sortedPositions.map(position => (
-                    <li key={`${id}_${position.title}`}>
-                        <p>{position.description}</p>
-                        <ul>
-                            {position.keyWords.map(word => (
-                                <li key={`${name}_${position.title}_keyword_${word}`}>{word}</li>
-                            ))}
-                        </ul>
-                    </li>
-                ))}
-            </ul>
+            <div className={styles['multiple-positions']}>
+                <ol className={styles['multiple-positions__list']}>
+                    {sortedPositions.map(position => (
+                        <li key={`${id}_${position.title}`} className={styles['multiple-positions__entry']}>
+                            <p>{position.description}</p>
+                            {/*<ul>
+                                {position.keyWords.map(word => (
+                                    <li key={`${name}_${position.title}_keyword_${word}`}>{word}</li>
+                                ))}
+                            </ul>*/}
+                        </li>
+                    ))}
+                </ol>
+            </div>
         </section>
     );
 };
