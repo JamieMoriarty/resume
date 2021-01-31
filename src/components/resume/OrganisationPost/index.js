@@ -3,6 +3,8 @@ import React from 'react';
 import { format } from 'date-fns';
 import { byPositionStartDate } from 'data/utils/sort';
 
+import styles from './Organisations.module.scss';
+
 const OrganisationPost = ({ organisation }) => {
     const { name, positions } = organisation;
     return (
@@ -15,11 +17,11 @@ const OrganisationPost = ({ organisation }) => {
 
 const SinglePositionPost = ({ organisationName, title, start, end, description, keyWords }) => {
     return (
-        <section>
-            <header>
-                <h1>{title}</h1>
-                <h2>{organisationName}</h2>
-                <p>
+        <section className={styles['organisation-post']}>
+            <header className={styles['organisation-post__header']}>
+                <h1 className={styles['organisation-post__title']}>{title}</h1>
+                <h2 className={styles['organisation-post__subtitle']}>{organisationName}</h2>
+                <p className={styles['organisation-post__time']}>
                     {format(start, 'do MMMM y')} - {end ? format(end, 'do MMMM y') : ''}
                 </p>
             </header>
@@ -39,10 +41,10 @@ const MultiplePositionsPost = ({ id, name, positions }) => {
 
     const sortedPositions = positions.sort(byPositionStartDate);
     return (
-        <section>
-            <header>
-                <h1>{name}</h1>
-                <p>
+        <section className={styles['organisation-post']}>
+            <header className={styles['organisation-post__header']}>
+                <h1 className={styles['organisation-post__title']}>{name}</h1>
+                <p className={styles['organisation-post__time']}>
                     {format(start, 'do MMMM y')} - {end ? format(end, 'do MMMM y') : ''}
                 </p>
             </header>
