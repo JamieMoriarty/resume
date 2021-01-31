@@ -1,5 +1,10 @@
 import React from 'react';
 
+import { format } from 'date-fns';
+
+const mostRecentFirst = dateSelector => (firstEntry, secondEntry) =>
+    dateSelector(secondEntry) - dateSelector(firstEntry);
+
 const OrganisationPost = ({ organisation }) => {
     const { name, positions } = organisation;
     return (
@@ -30,7 +35,8 @@ const SinglePositionPost = ({
                 <h1>{title}</h1>
                 <h2>{organisationName}</h2>
                 <p>
-                    {start} - {end ? end : ''}
+                    {format(start, 'do MMMM y')} -{' '}
+                    {end ? format(end, 'do MMMM y') : ''}
                 </p>
             </header>
             <p>{description}</p>
@@ -45,12 +51,18 @@ const SinglePositionPost = ({
 
 const MultiplePositionsPost = ({ id, name, positions }) => {
     const start = positions[0].start;
+    const end = positions[positions.length - 1].end;
+
+    const sortedPositions = positions.sort(
+        mostRecentFirst(position => position.start)
+    );
     return (
         <section>
             <header>
                 <h1>{name}</h1>
                 <p>
-                    {start} - {end ? end : ''}
+                    {format(start, 'do MMMM y')} -{' '}
+                    {end ? format(end, 'do MMMM y') : ''}
                 </p>
             </header>
             <ul>
