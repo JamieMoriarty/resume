@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { byPositionStartDate } from 'data/utils/sort';
 
 import styles from './Organisations.module.scss';
+import PropTypes from 'prop-types';
 
 const OrganisationPost = ({ organisation }) => {
     const { name, positions } = organisation;
@@ -13,6 +14,13 @@ const OrganisationPost = ({ organisation }) => {
             {positions.length > 1 && <MultiplePositionsPost {...organisation} />}
         </>
     );
+};
+
+OrganisationPost.propTypes = {
+    organisation: PropTypes.shape({
+        name: PropTypes.string,
+        positions: PropTypes.array,
+    }),
 };
 
 const SinglePositionPost = ({ organisationName, title, start, end, description, keyWords }) => {
@@ -35,6 +43,15 @@ const SinglePositionPost = ({ organisationName, title, start, end, description, 
             </div>
         </section>
     );
+};
+
+SinglePositionPost.propTypes = {
+    organisationName: PropTypes.string,
+    title: PropTypes.string,
+    start: PropTypes.object,
+    end: PropTypes.object,
+    description: PropTypes.string,
+    keyWords: PropTypes.array,
 };
 
 const MultiplePositionsPost = ({ id, name, positions }) => {
@@ -66,6 +83,20 @@ const MultiplePositionsPost = ({ id, name, positions }) => {
             </div>
         </section>
     );
+};
+
+MultiplePositionsPost.propTypes = {
+    id: PropTypes.string,
+    name: PropTypes.string,
+    positions: PropTypes.arrayOf(
+        PropTypes.shape({
+            title: PropTypes.string,
+            start: PropTypes.object,
+            end: PropTypes.object,
+            description: PropTypes.string,
+            keyWords: PropTypes.array,
+        })
+    ),
 };
 
 export default OrganisationPost;
