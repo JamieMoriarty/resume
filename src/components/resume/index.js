@@ -1,15 +1,13 @@
 import React from 'react';
 
-import { parse, format } from 'date-fns';
+import { parse } from 'date-fns';
 
 // Components
 import OrganisationPost from 'src/components/resume/OrganisationPost';
 
+// Data:
 import history from 'data/workHistory.json';
-
-const mostRecentFirst = dateSelector => (firstEntry, secondEntry) => {
-    return dateSelector(secondEntry) - dateSelector(firstEntry);
-};
+import { byOrganisationStartDate } from 'data/utils/sort';
 
 const parseAndSortHistory = history => {
     const parsedHistory = history.map(entry => ({
@@ -21,19 +19,14 @@ const parseAndSortHistory = history => {
         })),
     }));
 
-    return parsedHistory.sort(
-        mostRecentFirst(entry => entry.positions[0].start)
-    );
+    return parsedHistory.sort(byOrganisationStartDate);
 };
 
 const Resume = () => {
     return (
         <article>
             {parseAndSortHistory(history).map(organisation => (
-                <OrganisationPost
-                    key={`resume_org_${organisation.id}`}
-                    organisation={organisation}
-                />
+                <OrganisationPost key={`resume_org_${organisation.id}`} organisation={organisation} />
             ))}
         </article>
     );
