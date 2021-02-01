@@ -15,7 +15,7 @@ const parseAndSortHistory = history => {
         positions: entry.positions.map(position => ({
             ...position,
             start: parse(position.start, 'dd-M-yyyy', new Date()),
-            end: parse(position.end, 'dd-M-yyyy', new Date()),
+            end: position.end ? parse(position.end, 'dd-M-yyyy', new Date()) : null,
         })),
     }));
 

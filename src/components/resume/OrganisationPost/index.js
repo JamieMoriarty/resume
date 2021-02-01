@@ -64,14 +64,17 @@ const MultiplePositionsPost = ({ id, name, positions }) => {
             <header className={styles['organisation-post__header']}>
                 <h1 className={styles['organisation-post__title']}>{name}</h1>
                 <p className={styles['organisation-post__time']}>
-                    {format(start, 'do MMMM y')} - {end ? format(end, 'do MMMM y') : ''}
+                    {format(start, 'do MMMM y')} - {end ? format(end, 'do MMMM y') : 'now'}
                 </p>
             </header>
             <div className={styles['multiple-positions']}>
                 <ol className={styles['multiple-positions__list']}>
                     {sortedPositions.map(position => (
                         <li key={`${id}_${position.title}`} className={styles['multiple-positions__entry']}>
-                            <p>{position.description}</p>
+                            <p>
+                                <strong>{position.description.headline}</strong>
+                            </p>
+                            <p>{position.description.details}</p>
                             {/*<ul>
                                 {position.keyWords.map(word => (
                                     <li key={`${name}_${position.title}_keyword_${word}`}>{word}</li>
@@ -93,7 +96,7 @@ MultiplePositionsPost.propTypes = {
             title: PropTypes.string,
             start: PropTypes.object,
             end: PropTypes.object,
-            description: PropTypes.string,
+            description: PropTypes.object,
             keyWords: PropTypes.array,
         })
     ),

@@ -1,35 +1,51 @@
 [
-  {
-    "id": "university_of_copenhagen",
-    "name": "University of Copenhagen",
-    "positions": [
-      {
-        "start": "15-04-2014",
-        "end": "14-08-2017",
-        "title": "Phd. student",
-        "description": "I obtained my Phd degree in theoretical mathematics (specifically Operator Algebra) based on my thesis with the title \"Regularity of C*-algebras and central sequence algebras\"",
-        "keyWords": ["Self-driven", "Analytical", "Stubborn"]
-      }
-    ]
-  },
-  {
-    "id": "nuuday",
-    "name": "Nuuday",
-    "positions": [
-      {
-        "start": "01-12-2017",
-        "end": "30-04-2020",
-        "title": "Back-end developer",
-        "description": "Back-end developer in cross-functional team (business, back-end and front-end) in B2B part of Nuuday (TDC Erhverv). The focus area shifted, but revolved around mobile voice sales and management. First Java, then Kotlin. Towards the end a bit of front-end work in React SPA with both javascript and typescript",
-        "keyWords": ["Self-driven", "Analytical", "Stubborn"]
-      },
-      {
-        "start": "01-05-2020",
-        "end": "30-09-2020",
-        "title": "Front-end developer",
-        "description": "Front-end developer in cross-functional team in B2C part of Nuuday (YouSee). Team focus area was a shop for TV susbcriptions and self-service. React (javascript) SPA with Redux in a hacked SiteCore setup",
-        "keyWords": ["Self-driven", "Analytical", "Stubborn"]
-      }
-    ]
-  }
+    {
+        "id": "university_of_copenhagen",
+        "name": "University of Copenhagen",
+        "positions": [
+            {
+                "start": "15-04-2014",
+                "end": "14-08-2017",
+                "title": "Phd. student",
+                "description": "I obtained my Phd degree in theoretical mathematics (specifically Operator Algebra) based on my thesis with the title \"Regularity of C*-algebras and central sequence algebras\"",
+                "keyWords": ["Self-driven", "Analytical", "Stubborn"]
+            }
+        ]
+    },
+    {
+        "id": "nuuday",
+        "name": "Nuuday",
+        "description": "Both back-end and front-end development in a number of cross-functional agile teams.",
+        "positions": [
+            {
+                "start": "01-12-2017",
+                "end": "30-04-2020",
+                "title": "Back-end developer",
+                "description": {
+                    "headline": "B2B mobile voice subscriptions (for TDC Erhverv).",
+                    "details": "Mainly back-end in Java/Kotlin and Spring (Boot). Towards the end a bit of front-end in React (typescript). Initally an open-pages shop for new customers (now closed), later self-service for enterprise solutions."
+                },
+                "keyWords": ["Self-driven", "Analytical", "Stubborn"]
+            },
+            {
+                "start": "01-05-2020",
+                "end": "30-09-2020",
+                "title": "Front-end developer",
+                "description": {
+                    "headline": "B2C TV subscriptions sales (YouSee).",
+                    "details": "Front-end in React (javascript) with Redux and Rxjs, hosted in a hacked SiteCore set-up with content in JSON files. An open pages shop for TV subscriptions handling both new and existing customers."
+                },
+                "keyWords": ["Self-driven", "Analytical", "Stubborn"]
+            },
+            {
+                "start": "01-10-2020",
+                "title": "Front-end developer",
+                "description": {
+                    "headline": "B2C mobile voice subscription sales (YouSee).",
+                    "details": "Front-end in React (javascript) with redux-bees, hosted on AWS with content from a mix of legacy PHP back-end and JSON files. An open pages shop for mobile voice subscriptions (and phone bundles) and up/down-grades for existing customers."
+                },
+                "keyWords": ["Self-driven", "Analytical", "Stubborn"]
+            }
+        ]
+    }
 ]
