@@ -1,0 +1,24 @@
+@import 'import.scss';
+
+.techs-module {
+    &__category-title {
+        @extend .section-title;
+    }
+
+    &__category-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__category-item {
+        &-3 {
+            flex: 0 1 33%;
+        }
+
+        &-2 {
+            flex: 1 1 50%;
+        }
+    }
+}
