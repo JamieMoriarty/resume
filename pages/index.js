@@ -21,7 +21,7 @@ export default function Home() {
                 </div>
 
                 <div className={styles.grid}>
-                    <FrontPageCard title="Resumé" description="A brief description of everything relevant to future employers :)">
+                    <FrontPageCard title="Experience" description="A brief description of my professional experience">
                         <Resume />
                     </FrontPageCard>
                 </div>
