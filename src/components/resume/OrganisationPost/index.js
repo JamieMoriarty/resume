@@ -23,7 +23,7 @@ OrganisationPost.propTypes = {
     }),
 };
 
-const SinglePositionPost = ({ organisationName, title, start, end, description, keyWords }) => {
+const SinglePositionPost = ({ organisationName, title, start, end, description }) => {
     return (
         <section className={styles['organisation-post']}>
             <header className={styles['organisation-post__header']}>
@@ -35,11 +35,6 @@ const SinglePositionPost = ({ organisationName, title, start, end, description, 
             </header>
             <div className={styles['single-position']}>
                 <p>{description}</p>
-                {/*<ul>
-                    {keyWords.map(word => (
-                        <li key={`${organisationName}_keyword_${word}`}>{word}</li>
-                    ))}
-                </ul>*/}
             </div>
         </section>
     );
@@ -75,11 +70,6 @@ const MultiplePositionsPost = ({ id, name, positions }) => {
                                 <strong>{position.description.headline}</strong>
                             </p>
                             <p>{position.description.details}</p>
-                            {/*<ul>
-                                {position.keyWords.map(word => (
-                                    <li key={`${name}_${position.title}_keyword_${word}`}>{word}</li>
-                                ))}
-                            </ul>*/}
                         </li>
                     ))}
                 </ol>

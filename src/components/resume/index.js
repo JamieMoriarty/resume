@@ -9,7 +9,7 @@ import OrganisationPost from 'src/components/resume/OrganisationPost';
 import history from 'data/workHistory.json';
 import { byOrganisationStartDate } from 'data/utils/sort';
 
-const parseAndSortHistory = history => {
+const parseAndSort = history => {
     const parsedHistory = history.map(entry => ({
         ...entry,
         positions: entry.positions.map(position => ({
@@ -25,7 +25,7 @@ const parseAndSortHistory = history => {
 const Resume = () => {
     return (
         <article>
-            {parseAndSortHistory(history).map(organisation => (
+            {parseAndSort(history).map(organisation => (
                 <OrganisationPost key={`resume_org_${organisation.id}`} organisation={organisation} />
             ))}
         </article>
