@@ -1,4 +1,13 @@
 {
-    "languages": ["Javascript", "Typescript", "Java", "Kotlin", "SQL"],
-    "Frameworks": ["Spring + SpringBoot (Java/Kotlin)", "React (mainly javascript, also some typescript)"]
+    "languages": {
+        "title": "Languages",
+        "items": ["Javascript", "Typescript", "Java", "Kotlin", "SQL"]
+    },
+    "frameworks": {
+        "title": "Frameworks and Libraries",
+        "items": {
+            "Java/Kotlin": ["Spring", "Spring Boot"],
+            "javascript": ["React", "Redux"]
+        }
+    }
 }
