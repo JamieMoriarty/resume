@@ -10,7 +10,7 @@ const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1).to
 
 const Techs = () => {
     return (
-        <article>
+        <section>
             <TechCategory title={techExperience.languages.title}>
                 <ul className={styles['techs-module__category-list']}>
                     {techExperience.languages.items.map(item => (
@@ -34,18 +34,16 @@ const Techs = () => {
                     </React.Fragment>
                 ))}
             </TechCategory>
-        </article>
+        </section>
     );
 };
 
 const TechCategory = ({ title, children }) => {
     return (
-        <section>
-            <header>
-                <h1 className={styles['techs-module__category-title']}>{capitalize(title)}</h1>
-            </header>
+        <React.Fragment>
+            <h1 className={styles['techs-module__category-title']}>{capitalize(title)}</h1>
             {children}
-        </section>
+        </React.Fragment>
     );
 };
 
