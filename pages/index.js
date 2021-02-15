@@ -5,6 +5,7 @@ import styles from 'styles/Home.module.scss';
 
 import FrontPageCard from '@/components/frontpage/Card';
 import Resume from '@/components/resume';
+import TechStuff from '@/components/techs';
 
 export default function Home() {
     return (
@@ -25,6 +26,9 @@ export default function Home() {
                 <div className={styles.grid}>
                     <FrontPageCard title="Experience" description="A brief description of my professional experience">
                         <Resume />
+                    </FrontPageCard>
+                    <FrontPageCard title="Tech stuff" description="Summarized tech experience (languages, frameworks, etc.)">
+                        <TechStuff />
                     </FrontPageCard>
                 </div>
             </main>

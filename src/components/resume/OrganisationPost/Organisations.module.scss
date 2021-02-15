@@ -1,16 +1,16 @@
+@import 'import.scss';
+
 .organisation-post {
     &__header {
         margin-top: 0.5rem;
     }
 
     &__title {
-        font-size: 1.3rem;
-        margin: 0;
+        @extend .section-title;
     }
 
     &__subtitle {
-        font-size: 1.1rem;
-        font-weight: 700;
+        @extend .section-subtitle;
 
         margin-top: 0.5rem;
     }

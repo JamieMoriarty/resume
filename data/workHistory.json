@@ -4,6 +4,7 @@
         "name": "University of Copenhagen",
         "positions": [
             {
+                "id": "phd",
                 "start": "15-04-2014",
                 "end": "14-08-2017",
                 "title": "Phd. student",
@@ -18,6 +19,7 @@
         "description": "Both back-end and front-end development in a number of cross-functional agile teams.",
         "positions": [
             {
+                "id": "nuuday_1",
                 "start": "01-12-2017",
                 "end": "30-04-2020",
                 "title": "Back-end developer",
@@ -28,6 +30,7 @@
                 "keyWords": ["Self-driven", "Analytical", "Stubborn"]
             },
             {
+                "id": "nuuday_2",
                 "start": "01-05-2020",
                 "end": "30-09-2020",
                 "title": "Front-end developer",
@@ -38,6 +41,7 @@
                 "keyWords": ["Self-driven", "Analytical", "Stubborn"]
             },
             {
+                "id": "nuuday_3",
                 "start": "01-10-2020",
                 "title": "Front-end developer",
                 "description": {

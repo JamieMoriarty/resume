@@ -49,7 +49,7 @@ SinglePositionPost.propTypes = {
     keyWords: PropTypes.array,
 };
 
-const MultiplePositionsPost = ({ id, name, positions }) => {
+const MultiplePositionsPost = ({ name, positions }) => {
     const start = positions[0].start;
     const end = positions[positions.length - 1].end;
 
@@ -65,7 +65,7 @@ const MultiplePositionsPost = ({ id, name, positions }) => {
             <div className={styles['multiple-positions']}>
                 <ol className={styles['multiple-positions__list']}>
                     {sortedPositions.map(position => (
-                        <li key={`${id}_${position.title}`} className={styles['multiple-positions__entry']}>
+                        <li key={position.id} className={styles['multiple-positions__entry']}>
                             <p>
                                 <strong>{position.description.headline}</strong>
                             </p>
@@ -79,10 +79,10 @@ const MultiplePositionsPost = ({ id, name, positions }) => {
 };
 
 MultiplePositionsPost.propTypes = {
-    id: PropTypes.string,
     name: PropTypes.string,
     positions: PropTypes.arrayOf(
         PropTypes.shape({
+            id: PropTypes.string,
             title: PropTypes.string,
             start: PropTypes.object,
             end: PropTypes.object,
