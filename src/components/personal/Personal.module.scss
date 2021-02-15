@@ -1,0 +1,14 @@
+.personal-module {
+    p:first-child {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    p {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}

@@ -6,6 +6,7 @@ import styles from 'styles/Home.module.scss';
 import FrontPageCard from '@/components/frontpage/Card';
 import Resume from '@/components/resume';
 import TechStuff from '@/components/techs';
+import PersonalStuff from '@/components/personal';
 
 export default function Home() {
     return (
@@ -29,6 +30,9 @@ export default function Home() {
                     </FrontPageCard>
                     <FrontPageCard title="Tech stuff" description="Summarized tech experience (languages, frameworks, etc.)">
                         <TechStuff />
+                    </FrontPageCard>
+                    <FrontPageCard title="Personal stuff" description="A bit of personal info about me">
+                        <PersonalStuff />
                     </FrontPageCard>
                 </div>
             </main>
