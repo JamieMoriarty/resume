@@ -13,7 +13,10 @@ const Techs = () => {
             <TechCategory title={techExperience.languages.title}>
                 <ul className={styles['techs-module__category-list']}>
                     {techExperience.languages.items.map(item => (
-                        <li key={`tech_category_language_${item}`} className={styles['techs-module__category-item-3']}>
+                        <li
+                            key={`tech_category_language_${item}`}
+                            className={`${styles['techs-module__category-item']} ${styles['techs-module__category-item--3']}`}
+                        >
                             {item}
                         </li>
                     ))}
@@ -25,7 +28,10 @@ const Techs = () => {
                         <h2 className={styles['techs-module__category-subtitle']}>{language}</h2>
                         <ul className={styles['techs-module__category-list']}>
                             {techExperience.frameworks.items[language].map(item => (
-                                <li key={`tech_category_frameworks_${language}_${item}`} className={styles['techs-module__category-item-3']}>
+                                <li
+                                    key={`tech_category_frameworks_${language}_${item}`}
+                                    className={`${styles['techs-module__category-item']} ${styles['techs-module__category-item--3']}`}
+                                >
                                     {item}
                                 </li>
                             ))}

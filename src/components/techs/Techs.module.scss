@@ -3,13 +3,19 @@
 .techs-module {
     &__category-title {
         @extend .section-title;
+
+        padding-top: 0.5rem;
+
+        &:first-child {
+            padding-top: 0;
+        }
     }
 
     &__category-subtitle {
         @extend .section-subtitle;
 
         margin-top: 1rem;
-        margin-left: 0.5rem;
+        margin-left: 1rem;
     }
 
     &__category-list {
@@ -22,7 +28,9 @@
     }
 
     &__category-item {
-        &-3 {
+        padding: 0.1rem 0;
+
+        &--3 {
             flex: 0 1 33%;
         }
 

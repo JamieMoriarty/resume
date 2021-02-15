@@ -19,22 +19,19 @@ export default function Home() {
             <main className={styles.main}>
                 <h1 className={styles.title}>Welcome!</h1>
 
-                <div className={styles.description}>
-                    <p>Work is in progress on this page.</p>
-                    <p>You can find a resumé-like summary of my professional experience below. More things to come.</p>
-                </div>
-
                 <div className={styles.grid}>
-                    <FrontPageCard title="Experience" description="A brief description of my professional experience">
-                        <Resume />
-                    </FrontPageCard>
                     <FrontPageCard title="Tech stuff" description="Summarized tech experience (languages, frameworks, etc.)">
                         <TechStuff />
+                    </FrontPageCard>
+                    <FrontPageCard title="Work stuff" description="A brief description of my professional experience">
+                        <Resume />
                     </FrontPageCard>
                     <FrontPageCard title="Personal stuff" description="A bit of personal info about me">
                         <PersonalStuff />
                     </FrontPageCard>
                 </div>
+
+                <p className={styles['wip-notice']}>This is work in progress. Watch out for changes in the near future!</p>
             </main>
         </div>
     );
