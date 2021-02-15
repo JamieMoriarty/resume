@@ -5,11 +5,21 @@
         @extend .section-title;
     }
 
+    &__category-subtitle {
+        font-size: 1.1rem;
+        font-weight: 700;
+
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+    }
+
     &__category-list {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
         align-items: flex-start;
+
+        margin: 0.5rem 0 1rem;
     }
 
     &__category-item {

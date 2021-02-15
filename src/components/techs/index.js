@@ -23,7 +23,7 @@ const Techs = () => {
             <TechCategory title={techExperience.frameworks.title}>
                 {Object.keys(techExperience.frameworks.items).map(language => (
                     <React.Fragment key={`tech_category_frameworks_${language}`}>
-                        <h2>{language}</h2>
+                        <h2 className={styles['techs-module__category-subtitle']}>{language}</h2>
                         <ul className={styles['techs-module__category-list']}>
                             {techExperience.frameworks.items[language].map(item => (
                                 <li key={`tech_category_frameworks_${language}_${item}`} className={styles['techs-module__category-item-3']}>
