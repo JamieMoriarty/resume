@@ -1,13 +1,15 @@
 {
     "languages": {
         "title": "Languages",
-        "items": ["Javascript", "Typescript", "Java", "Kotlin", "SQL"]
+        "items": ["javascript", "typescript", "Sass/CSS", "Java", "Kotlin", "SQL (PostGres and Oracle)"]
     },
     "frameworks": {
-        "title": "Frameworks and Libraries",
+        "title": "Frameworks, Libraries and Build Tools",
         "items": {
-            "Java/Kotlin": ["Spring", "Spring Boot"],
-            "javascript": ["React", "Redux"]
+            "Java/Kotlin": ["Spring", "Spring Boot", "Hibernate", "JUnit (4)", "Mockito", "Cucumber", "Maven", "Gradle"],
+            "javascript": ["React", "Redux", "Jest", "React testing library", "Webpack", "npm"],
+            "CSS": ["Bootstrap"],
+            "CI/CD tools": ["Jenkins", "Drone", "Docker", "git", "Rancher"]
         }
     }
 }
