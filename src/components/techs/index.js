@@ -1,12 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Data:
 import techExperience from 'data/techExperience.json';
 
 // styles
 import styles from './Techs.module.scss';
-
-const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 
 const Techs = () => {
     return (
@@ -39,12 +38,19 @@ const Techs = () => {
 };
 
 const TechCategory = ({ title, children }) => {
+    const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+
     return (
         <React.Fragment>
             <h1 className={styles['techs-module__category-title']}>{capitalize(title)}</h1>
             {children}
         </React.Fragment>
     );
+};
+
+TechCategory.propTypes = {
+    title: PropTypes.string,
+    children: PropTypes.node,
 };
 
 export default Techs;

@@ -6,8 +6,7 @@
     }
 
     &__category-subtitle {
-        font-size: 1.1rem;
-        font-weight: 700;
+        @extend .section-subtitle;
 
         margin-top: 1rem;
         margin-left: 0.5rem;
