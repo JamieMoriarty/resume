@@ -20,11 +20,11 @@ export default function Home() {
                 <h1 className={styles.title}>Welcome!</h1>
 
                 <div className={styles.grid}>
-                    <FrontPageCard title="Experience" description="A brief description of my professional experience">
-                        <Resume />
-                    </FrontPageCard>
                     <FrontPageCard title="Tech stuff" description="Summarized tech experience (languages, frameworks, etc.)">
                         <TechStuff />
+                    </FrontPageCard>
+                    <FrontPageCard title="Work stuff" description="A brief description of my professional experience">
+                        <Resume />
                     </FrontPageCard>
                     <FrontPageCard title="Personal stuff" description="A bit of personal info about me">
                         <PersonalStuff />
