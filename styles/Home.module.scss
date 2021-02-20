@@ -19,14 +19,18 @@
     text-align: center;
 }
 
-.wip-notice {
-    font-size: 0.9rem;
-    font-weight: 600;
+.eop-extra-info {
+    margin: 3rem auto 0;
+    padding: 0 3rem;
 
-    margin-top: 3rem;
+    display: inline-block;
+    max-width: 50rem;
 
     @include media-breakpoint-down(sm) {
         margin-top: 2rem;
-        padding: 0 2rem;
     }
+}
+
+.wip-notice {
+    font-weight: 600;
 }

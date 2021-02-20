@@ -32,7 +32,17 @@ export default function Home() {
                     </Card>
                 </CardGrid>
 
-                <p className={styles['wip-notice']}>This is work in progress. Watch out for changes in the near future!</p>
+                <div className={styles['eop-extra-info']}>
+                    <p>
+                        This SPA is a Next.js app, bootstrapped with create-next-app, and uses react-bootstrap for css and sass utilities. Check out
+                        the{' '}
+                        <a href="https://github.com/JamieMoriarty/resume" target="_blank" rel="noreferrer">
+                            repo
+                        </a>{' '}
+                        for more details.
+                    </p>
+                    <p className={styles['wip-notice']}>This is work in progress. Watch out for changes in the near future!</p>
+                </div>
             </main>
         </div>
     );
