@@ -11,14 +11,17 @@ const Techs = () => {
     return (
         <section>
             <TechCategory title={techExperience.languages.title}>
-                <div className="container">
-                    <div className={`row ${styles['techs-module__category-list']}`}>
+                <div className="container-fluid">
+                    <ul className={`row ${styles['techs-module__category-list']}`}>
                         {techExperience.languages.items.map(item => (
-                            <div key={`tech_category_language_${item}`} className={`${styles['techs-module__category-item']} col-6 col-md-4`}>
+                            <li
+                                key={`tech_category_language_${item}`}
+                                className={`${styles['techs-module__category-item']} col-12 col-sm-6 col-md-4`}
+                            >
                                 {item}
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
                 </div>
             </TechCategory>
             <TechCategory title={techExperience.frameworks.title}>
@@ -26,16 +29,16 @@ const Techs = () => {
                     <React.Fragment key={`tech_category_frameworks_${language}`}>
                         <h2 className={styles['techs-module__category-subtitle']}>{language}</h2>
                         <div className="container">
-                            <div className={`row ${styles['techs-module__category-list']}`}>
+                            <ul className={`row ${styles['techs-module__category-list']}`}>
                                 {techExperience.frameworks.items[language].map(item => (
-                                    <div
+                                    <li
                                         key={`tech_category_frameworks_${language}_${item}`}
                                         className={`${styles['techs-module__category-item']} col-6 col-md-4`}
                                     >
                                         {item}
-                                    </div>
+                                    </li>
                                 ))}
-                            </div>
+                            </ul>
                         </div>
                     </React.Fragment>
                 ))}
