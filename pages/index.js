@@ -3,8 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import styles from 'styles/Home.module.scss';
 
-import CardGrid from '@/components/frontpage/CardDisplay';
-import FrontPageCard from '@/components/frontpage/Card';
+import CardGrid, { Card } from '@/components/frontpage/CardDisplay';
 import Resume from '@/components/resume';
 import TechStuff from '@/components/techs';
 import PersonalStuff from '@/components/personal';
@@ -22,15 +21,15 @@ export default function Home() {
                 <h1 className={styles.title}>Welcome!</h1>
 
                 <CardGrid>
-                    <FrontPageCard title="Tech stuff" description="Summarized tech experience (languages, frameworks, etc.)">
+                    <Card title="Tech stuff" description="Summarized tech experience (languages, frameworks, etc.)">
                         <TechStuff />
-                    </FrontPageCard>
-                    <FrontPageCard title="Work stuff" description="A brief description of my professional experience">
+                    </Card>
+                    <Card title="Work stuff" description="A brief description of my professional experience">
                         <Resume />
-                    </FrontPageCard>
-                    <FrontPageCard title="Personal stuff" description="A bit of personal info about me">
+                    </Card>
+                    <Card title="Personal stuff" description="A bit of personal info about me">
                         <PersonalStuff />
-                    </FrontPageCard>
+                    </Card>
                 </CardGrid>
 
                 <p className={styles['wip-notice']}>This is work in progress. Watch out for changes in the near future!</p>
